@@ -46,6 +46,10 @@
     margin: 5px 0;
 }
 
+.info {
+    display: none;
+}
+
 .label {
     text-transform: capitalize;
     font-weight: bolder;

@@ -1,8 +1,8 @@
 // custom error handler
 const handleFetchRes = response => {
     if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
-        throw new Error(message);
+        const message = `An error has occured: ${response.status}`
+        throw new Error(message)
     }
     return response.json()
 }
@@ -28,17 +28,35 @@ const getPredictionData = async name => {
 
 const addPrediction = () => {
     let name = document.getElementById("input").value
-    getPredictionData(name)
+    if (!name) {
+        document.querySelector(".input .label").textContent = "Please Enter a name First"
+    } else {
+        getPredictionData(name)
         .then(res => {
-            document.getElementById("age").textContent = res.age
-            document.getElementById("gender").textContent = res.gender
-            document.getElementById("nationality").textContent = res.countries[0].country_id
+            document.querySelector(".info").style.display = "block"
+
+            document.getElementById("name").textContent = name
+            document.getElementById("age").textContent =   res.age ? res.age : "No Age Predicted"
+            document.getElementById("gender").textContent = res.gender ? res.gender : "No Gender Predicted"
+            let countries = res.countries
+            if (countries.length === 0 ) {
+                document.getElementById("nationalities").textContent = "No Countries predicted"
+            } else {
+                let ul = "<ul>"
+                countries.forEach(country => {
+                    let li = `<li>${country.country_id}</li>`
+                    ul = ul + li
+                })
+                ul = ul + "</ul>"
+                document.getElementById("nationalities").innerHTML = ul
+            }
         })
         .catch(err => showErr(err))
+    }
 }
 
 const showErr = error => {
-    console.log(error)
+    document.querySelector(".input .label").textContent = error
 }
 
 const main = () => {
