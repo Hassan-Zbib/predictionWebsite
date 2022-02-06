@@ -1,0 +1,91 @@
+:root {
+    --main-color: #5cabb3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  var(--main-color);
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.title {
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 4vh;
+}
+
+.label {
+    align-self: flex-start;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 2vh;
+}
+
+#input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input:focus {
+    border: 3px solid #555;
+  }
+
+.input a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color : transparent;
+    border: 3px solid var(--main-color);
+    border-radius: 5px;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: small;
+}
+
+.input a:hover {
+    color: black;
+    border-color: black;
+}
+
+.input a:active {
+    top: 2px;
+    background-color: black;
+    color: white;
+}
+
+
+img {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 5px;
+}

@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-    <img id="image" src="" alt=""/>
-    <input id="input" type="text" value="">
-    <button id="predict">Predict</button>
-    <p id="age">Age: </p>
-    <p id="gender">Gender: </p>
-    <p id="nationality">Nationalities: </p>
-    <script src="scripts/script.js"></script>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="card">
+
+                <div class="card-items">
+                    <p class="title">Predict this dog's info</p>
+                    <img id="image" src="" alt="Random Dog Picture"/>
+                </div>
+
+
+                <div class="card-items">
+                    <p class="label">Enter a name</p>
+                    <div class="input">
+                        <input id="input" type="text" value="">
+                        <a id="predict" class="input-button">Predict</a>
+                    </div>
+
+                    <p id="age">Age: </p>
+                    <p id="gender">Gender: </p>
+                    <p id="nationality">Nationalities: </p>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="scripts/script.js"></script>
+    </body>
+
 </html>
