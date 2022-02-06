@@ -38,7 +38,6 @@
 .title {
     text-transform: capitalize;
     font-weight: bolder;
-    font-size: 4vh;
 }
 
 .input, .info{
@@ -53,7 +52,6 @@
 .label {
     text-transform: capitalize;
     font-weight: bolder;
-    font-size: 2vh;
 }
 
 #input {
@@ -87,9 +85,56 @@
     color: white;
 }
 
+ul
+{
+  list-style-type: none
+}
+li:before
+{
+  content: "-  ";
+  color: var(--main-color);
+  font-size: 25px;
+}
+
 
 img {
     height: 40vh;
     width: 40vh;
     border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+    .info {
+        font-size: large;
+    }
+    .label {
+        font-size: larger;
+    }
+    .title {
+        font-size: xx-large;
+    }
+}
+
+@media (min-width: 768px) {
+    .info {
+        font-size: medium;
+    }
+    .label {
+        font-size: large;
+    }
+    .title {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        font-size: smaller;
+    }
+    .label {
+        font-size: medium;
+    }
+    .title {
+        font-size: larger;
+    }
 }
